@@ -11,8 +11,8 @@
     --border: rgba(255,255,255,0.08);
     --text:   #f0efe8;
     --muted:  #888895;
-    --accent: #05EB09;
-    --accent2:#7D0909;
+    --accent: #4DFFBC;
+    --accent2:#FF4D4D;
     --serif:  'Instrument Serif', Georgia, serif;
     --sans:   'DM Sans', sans-serif;
 }
@@ -67,6 +67,12 @@ nav {
     background: rgba(10,10,15,0.85);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border);
+}
+
+.nav-logo img {
+    height: 50px;
+    width: auto;
+    display: block;
 }
 
 .nav-logo {
