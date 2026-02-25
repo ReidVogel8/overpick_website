@@ -1,5 +1,5 @@
 /* ══════════════════════════════════════════════
-   nav.js — Nexus shared JavaScript
+   nav.js — Overpick shared JavaScript
    ══════════════════════════════════════════════ */
 
 /**
