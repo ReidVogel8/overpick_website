@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Nexus — Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav>
+    <a class="nav-logo" href="index.html">Nexus<span>.</span></a>
+    <div class="nav-tabs">
+        <a class="nav-tab" href="index.html">Home</a>
+        <a class="nav-tab" href="blog.html">Blog</a>
+        <a class="nav-tab" href="contact.html">Contact</a>
+    </div>
+    <a class="nav-cta" href="contact.html">Get Early Access</a>
+</nav>
+
+<!-- ── PAGE CONTENT ── -->
+<div class="page-content">
+
+    <!-- Blog Header -->
+    <div class="blog-header">
+        <div class="section-label">Development Journal</div>
+        <h1 class="section-title">What's happening with Nexus</h1>
+        <p class="section-body">
+            We keep you in the loop — the wins, the hard parts, and everything in between. Real updates from the people building it.
+        </p>
+    </div>
+
+    <!-- Blog Posts -->
+    <div class="blog-posts">
+
+        <article class="blog-post" onclick="togglePost(this)">
+            <div class="post-date">Feb 20<br>2025</div>
+            <div>
+                <span class="post-tag tag-milestone">Milestone</span>
+                <div class="post-title">We've hit 500 waitlist sign-ups — thank you.</div>
+                <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua quis nostrud.</p>
+                <div class="post-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <br>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                    <br>
+                    <p>We're humbled and energized. Thank you to everyone who has signed up and spread the word. Your belief in what we're building means the world to us.</p>
+                </div>
+                <div class="read-more">Read more <span class="read-more-arrow">→</span></div>
+            </div>
+        </article>
+
+        <article class="blog-post" onclick="togglePost(this)">
+            <div class="post-date">Feb 08<br>2025</div>
+            <div>
+                <span class="post-tag tag-update">Update</span>
+                <div class="post-title">Core engine complete — moving to UI phase</div>
+                <p class="post-excerpt">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo. The hardest part is behind us.</p>
+                <div class="post-body">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <br>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. We have completed all core functionality and are now transitioning into the design and interface phase of development.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The next milestone is a closed alpha with a small group of testers.</p>
+                </div>
+                <div class="read-more">Read more <span class="read-more-arrow">→</span></div>
+            </div>
+        </article>
+
+        <article class="blog-post" onclick="togglePost(this)">
+            <div class="post-date">Jan 22<br>2025</div>
+            <div>
+                <span class="post-tag tag-announcement">Announcement</span>
+                <div class="post-title">Introducing Nexus — a new kind of productivity app</div>
+                <p class="post-excerpt">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur consectetur adipiscing elit.</p>
+                <div class="post-body">
+                    <p>We've been working on something for a while now, and today we're finally ready to talk about it. Nexus is a new kind of productivity application — one built from the ground up around the way real people actually work.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <br>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. We are a small team with big ambitions and we cannot wait to share more with you. Sign up for our waitlist to get the earliest access.</p>
+                </div>
+                <div class="read-more">Read more <span class="read-more-arrow">→</span></div>
+            </div>
+        </article>
+
+        <article class="blog-post" onclick="togglePost(this)">
+            <div class="post-date">Jan 10<br>2025</div>
+            <div>
+                <span class="post-tag tag-update">Update</span>
+                <div class="post-title">The team is assembled. Development begins.</div>
+                <p class="post-excerpt">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa.</p>
+                <div class="post-body">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                    <br>
+                    <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <br>
+                    <p>We've spent the past several months finding the right people for this project, and we couldn't be happier with the team we've assembled. Development officially kicked off this week and we are heads-down and moving fast.</p>
+                </div>
+                <div class="read-more">Read more <span class="read-more-arrow">→</span></div>
+            </div>
+        </article>
+
+    </div><!-- /.blog-posts -->
+
+    <footer>
+        <div class="footer-logo">Nexus<span>.</span></div>
+        <div class="footer-copy">© 2025 Nexus. All rights reserved.</div>
+    </footer>
+
+</div><!-- /.page-content -->
+
+<script src="nav.js"></script>
+</body>
+</html>
