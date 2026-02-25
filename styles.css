@@ -1,18 +1,18 @@
 /* ══════════════════════════════════════════════
-   style.css — Nexus shared stylesheet
+   style.css — Overpick shared stylesheet
    ══════════════════════════════════════════════ */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-    --bg:     #0a0a0f;
-    --bg2:    #111118;
-    --bg3:    #18181f;
+    --bg:     #141414;
+    --bg2:    #1a1a1a;
+    --bg3:    #444444;
     --border: rgba(255,255,255,0.08);
     --text:   #f0efe8;
     --muted:  #888895;
-    --accent: #c8f060;
-    --accent2:#60d4f0;
+    --accent: #05EB09;
+    --accent2:#7D0909;
     --serif:  'Instrument Serif', Georgia, serif;
     --sans:   'DM Sans', sans-serif;
 }
@@ -30,14 +30,26 @@ body {
 }
 
 /* ── NOISE OVERLAY ── */
-body::before {
+body::after {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
     pointer-events: none;
-    z-index: 9999;
-    opacity: 0.4;
+    z-index: -1;
+
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cstyle%3Etext%7Bfont-family:monospace;font-size:30px;fill:%2360d4f0;opacity:0.08;%7D%3C/style%3E%3Ctext x='15' y='20'%3E+%3C/text%3E%3Ctext x='45' y='20'%3E−%3C/text%3E%3Ctext x='15' y='50'%3E−%3C/text%3E%3Ctext x='45' y='50'%3E+%3C/text%3E%3C/svg%3E");
+
+    background-repeat: repeat;
+    animation: checkerMove 40s linear infinite;
+}
+
+@keyframes checkerMove {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 240px 240px;
+    }
 }
 
 /* ══════════════════════════════════════════════
@@ -259,7 +271,7 @@ footer {
     transform: translateX(-50%);
     width: 800px;
     height: 500px;
-    background: radial-gradient(ellipse at center, rgba(200,240,96,0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, rgba(0,200,20,0.08) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -268,7 +280,7 @@ footer {
     align-items: center;
     gap: 8px;
     padding: 6px 14px;
-    border: 1px solid rgba(200,240,96,0.3);
+    border: 2px solid rgba(255,255,255,0.3);
     border-radius: 100px;
     font-size: 12px;
     font-weight: 500;
