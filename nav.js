@@ -50,13 +50,27 @@ function togglePost(el) {
  * Hides the form and shows the success message.
  * @param {Event} e - The form submit event
  */
-function handleSubmit(e) {
+async function handleSubmit(e) {
     e.preventDefault();
 
-    const name  = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const comment = document.getElementById('message').value.trim(); // optional
 
     if (!name || !email) return;
+
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxdpMkaLrnvQwCLqyM0dfhjyePfximYiuAcdb-ZCarVCV3JOCu5Na1dn9EGAm_20PJbgA/exec";
+
+    try {
+        await fetch(SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ name, email, comment }),
+        });
+    } catch (err) {
+        console.error("Form submission failed:", err);
+    }
 
     document.getElementById('contact-form-wrap').style.display = 'none';
     document.getElementById('form-success').classList.add('show');

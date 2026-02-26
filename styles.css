@@ -48,7 +48,7 @@ body::after {
         background-position: 0 0;
     }
     to {
-        background-position: 240px 240px;
+        background-position: 500px 500px;
     }
 }
 
