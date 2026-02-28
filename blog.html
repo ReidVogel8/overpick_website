@@ -7,6 +7,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,6 +39,42 @@
 
     <!-- Blog Posts -->
     <div class="blog-posts">
+
+         <!-- Blog Post #3 -->
+        <article class="blog-post" onclick="togglePost(this)">
+            <div class="post-date">Feb 28<br>2026</div>
+            <div>
+                <span class="post-tag tag-update">Update</span>
+                <div class="post-title">Game Design - Point System</div>
+                <p class="post-excerpt">Designing a robust point system that rewards a variety of playstyles for head-to-head situations is crucial.</p>
+                <div class="post-body">
+                    <p>When you engage in 1v1 situations, you want the freedom to use whatever playstyle you prefer without a 
+                        "meta" providing enemies with a significant advantage. As part of our game's development, we simulated
+                        millions of randmoized situations and tweaked our point system to meet three main goals:
+                    </p>
+                    <br>
+                    <p>
+                        1. Discourage playstyles that favor extremely probable/improbable odds exclusively
+                    </p>
+                    <p>
+                        2. Provide all playstyles with a "fair shake" at winning
+                    </p>
+                    <p>
+                        3. Tighten the spread between winners and losers without diminishing  success
+                    </p>
+                    <br>
+                    <p>
+                        Through our simulations, we found strengths and weaknesses in our original design and found solutions
+                        we weren't expecting to create a more polished system. Whether you want to play it safe or risk it all, 
+                        we can confidently say you'll be at an equal playing field to opponents with different playstyles. We 
+                        also found a rewarding way to "tighten the spread" as naturally compounding success creates exponentially 
+                        larger results. This mechanism also spurred a unique idea for classifying success that players can use for 
+                        bragging rights as they aim for new high scores.
+                    </p>
+                </div>
+                <div class="read-more">Read more <span class="read-more-arrow">→</span></div>
+            </div>
+        </article>
 
         <!-- Blog Posts #2-->
         <article class="blog-post" onclick="togglePost(this)">
