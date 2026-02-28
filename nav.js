@@ -55,25 +55,36 @@ async function handleSubmit(e) {
 
     const name    = document.getElementById('name').value.trim();
     const email   = document.getElementById('email').value.trim();
-    const comment = document.getElementById('message').value.trim(); // optional
+    const message = document.getElementById('message').value.trim();
 
     if (!name || !email) return;
 
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxdpMkaLrnvQwCLqyM0dfhjyePfximYiuAcdb-ZCarVCV3JOCu5Na1dn9EGAm_20PJbgA/exec";
+    const btn = document.getElementById('submit-btn');
+    btn.classList.add('loading');
+    btn.innerHTML = '<span class="spinner"></span>Submitting…';
+
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycby2LGLaNd6UzsxZdLo4ikZMvCsv_exMuaRka-VcGQTNeCazBozrZTWXWCwuMC5MrT4CBQ/exec";
+
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('message', message);
+    // sheet_name is optional — defaults to 'Sheet1' in the script
+    formData.append('sheet_name', 'Sheet1');
 
     try {
         await fetch(SCRIPT_URL, {
-            method: "POST",
-            mode: "no-cors",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ name, email, comment }),
+            method: 'POST',
+            mode: 'no-cors',  // required for Apps Script
+            body: formData    // FormData matches e.parameter in doPost
         });
-    } catch (err) {
-        console.error("Form submission failed:", err);
+        console.log('Submitted!');
+        document.getElementById('contact-form-wrap').style.display = 'none';
+        document.getElementById('form-success').classList.add('show');
+    } catch (error) {
+        console.error('Error!', error.message);
+        alert('Something went wrong. Please try again.');
     }
-
-    document.getElementById('contact-form-wrap').style.display = 'none';
-    document.getElementById('form-success').classList.add('show');
 }
 
 // Run nav highlight as soon as the DOM is ready

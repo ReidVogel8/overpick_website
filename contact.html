@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./images/OpLogo1.svg">
 </head>
 <body>
 
@@ -39,7 +40,7 @@
 
         <!-- Form -->
         <div id="contact-form-wrap">
-            <form onsubmit="handleSubmit(event)">
+            <form method="post" onsubmit="handleSubmit(event)" name="myForm">
                 <div class="form-group">
                     <label class="form-label" for="name">Your Name</label>
                     <input class="form-input" id="name" type="text" placeholder="Yuno Ball" required />
@@ -55,7 +56,7 @@
                     </label>
                     <textarea class="form-textarea" id="message" placeholder="I'm excited about this because..."></textarea>
                 </div>
-                <button type="submit" class="form-submit">Join the Waitlist →</button>
+                <button type="submit" class="form-submit" id="submit-btn">Join the Waitlist →</button>
             </form>
             <p class="privacy-note">We respect your privacy. Unsubscribe anytime.</p>
         </div>
@@ -66,7 +67,6 @@
             <div class="success-title">You're on the list!</div>
             <p class="success-sub">Thanks for signing up. We'll be in touch as soon as we have news to share.</p>
         </div>
-
         <!-- Social links -->
         <div class="social-row">
             <a class="social-link" href="https://x.com/OverPickGame" target="_blank" rel="noopener noreferrer">
