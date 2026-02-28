@@ -13,8 +13,9 @@
     --muted:  #888895;
     --accent: #4DFFBC;
     --accent2:#FF4D4D;
-    --serif:  'Instrument Serif', Georgia, serif;
-    --sans:   'DM Sans', sans-serif;
+    --serif:  'Oswald', Georgia, serif;
+    --sans:   'Inter', sans-serif;
+    --sportbold: 'Anton', sans-serif;
 }
 
 html { scroll-behavior: smooth; }
@@ -187,6 +188,11 @@ nav {
     margin-bottom: 20px;
 }
 
+.section-title em {
+    font-style: italic;
+    color: var(--accent2);
+}
+
 .section-body {
     color: var(--muted);
     max-width: 580px;
@@ -277,7 +283,7 @@ footer {
     transform: translateX(-50%);
     width: 800px;
     height: 500px;
-    background: radial-gradient(ellipse at center, rgba(0,200,20,0.08) 0%, transparent 70%);
+    background: radial-gradient(ellipse at center, #0f3225 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -322,7 +328,7 @@ footer {
 
 .hero h1 em {
     font-style: italic;
-    color: var(--accent);
+    color: var(--accent2);
 }
 
 .hero-sub {
@@ -346,12 +352,20 @@ footer {
 /* Features grid */
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 2px;
     margin-top: 60px;
     border: 1px solid var(--border);
     border-radius: 16px;
     overflow: hidden;
+}
+
+.feature-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;  /* instead of space-between */
+    gap: 50px;                     /* controls spacing */
+    margin-bottom: 10px;
 }
 
 .feature-card {
@@ -376,8 +390,8 @@ footer {
     width: 44px;
     height: 44px;
     border-radius: 12px;
-    background: rgba(200,240,96,0.1);
-    border: 1px solid rgba(200,240,96,0.2);
+    background: #123b2b;
+    border: 1px solid var(--accent);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -387,7 +401,7 @@ footer {
 
 .feature-title {
     font-family: var(--serif);
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 10px;
     letter-spacing: -0.01em;
 }
@@ -474,8 +488,8 @@ footer {
 }
 
 .tag-update       { background: rgba(200,240,96,0.12);  color: var(--accent); }
-.tag-milestone    { background: rgba(96,212,240,0.12);  color: var(--accent2); }
-.tag-announcement { background: rgba(255,180,96,0.12);  color: #ffb460; }
+.tag-milestone    { background: rgba(96,212,240,0.12);  color: #ffb460; }
+.tag-announcement { background: rgba(255,180,96,0.12);  color: var(--accent2); }
 
 .post-title {
     font-family: var(--serif);
@@ -539,7 +553,7 @@ footer {
     margin-bottom: 18px;
 }
 
-.contact-title em { color: var(--accent); font-style: italic; }
+.contact-title em { color: var(--accent2); font-style: italic; }
 
 .contact-sub {
     color: var(--muted);
