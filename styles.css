@@ -411,6 +411,8 @@ footer {
     font-size: 14px;
     line-height: 1.7;
     font-weight: 300;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Big quote */
