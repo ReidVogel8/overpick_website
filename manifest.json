@@ -1,0 +1,14 @@
+{
+  "name": "OverPick",
+  "short_name": "OverPick",
+  "description": "OverPick the new free sports betting game",
+  "start_url": "/",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "images/OpLogo1.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
